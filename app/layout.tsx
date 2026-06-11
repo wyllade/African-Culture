@@ -52,6 +52,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased`}
       suppressHydrationWarning
+      data-darkreader-mode="never"
     >
       <body className="min-h-full flex flex-col">
         <Header />

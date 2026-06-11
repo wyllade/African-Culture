@@ -5,7 +5,7 @@ interface LogoProps {
 
 export function Logo({ className = 'h-7 w-7', variant = 'default' }: LogoProps) {
   return (
-    <svg viewBox="0 0 32 32" fill="none" className={className} aria-hidden="true">
+    <svg viewBox="0 0 32 32" fill="none" className={className} aria-hidden="true" suppressHydrationWarning>
       <circle cx="16" cy="16" r="14" stroke="currentColor" strokeWidth="2" opacity="0.3" />
       <path
         d="M5 20c2-3 5-5 9-5s7 2 9 5M7 12c2-1 5-2 8-2s5 1 7 2"
