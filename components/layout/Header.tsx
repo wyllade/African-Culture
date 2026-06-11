@@ -46,7 +46,7 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <Logo className="h-7 w-7 transition-transform group-hover:rotate-12 duration-300" />
+            <Logo className={cn('h-7 w-7 transition-transform group-hover:rotate-12 duration-300', showSolid ? 'text-primary' : 'text-white')} />
             <span className={cn(
               'text-xl font-bold tracking-tight transition-colors',
               'font-serif',

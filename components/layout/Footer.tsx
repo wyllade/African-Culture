@@ -39,7 +39,7 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             <div className="col-span-2 md:col-span-2">
               <Link href="/" className="flex items-center gap-2 mb-4">
-                <Logo className="h-6 w-6" />
+                <Logo className="h-6 w-6 text-primary" />
                 <span className="text-lg font-bold text-white font-serif">AfroSphere</span>
               </Link>
               <p className="text-sm text-stone-400 max-w-sm leading-relaxed">
