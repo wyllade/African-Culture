@@ -20,19 +20,22 @@ export function Tabs({ tabs, defaultTab, className }: TabsProps) {
 
   return (
     <div className={className}>
-      <div className="flex border-b border-stone-200 dark:border-stone-700">
+      <div className="flex gap-1 border-b border-stone-200 dark:border-stone-700">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActive(tab.id)}
             className={cn(
-              'px-4 py-3 text-sm font-medium transition-colors border-b-2 -mb-px',
+              'px-4 py-3 text-sm font-medium transition-all relative',
               active === tab.id
-                ? 'border-primary text-primary'
-                : 'border-transparent text-stone-500 hover:text-stone-700'
+                ? 'text-primary'
+                : 'text-stone-500 hover:text-stone-700 dark:hover:text-stone-300'
             )}
           >
             {tab.label}
+            {active === tab.id && (
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-primary rounded-full" />
+            )}
           </button>
         ))}
       </div>

@@ -9,9 +9,9 @@ interface BadgeProps {
 export function Badge({ children, variant = 'default', className }: BadgeProps) {
   const variants = {
     default: 'bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300',
-    primary: 'bg-primary/10 text-primary dark:bg-primary/20',
-    secondary: 'bg-secondary/10 text-secondary dark:bg-secondary/20',
-    accent: 'bg-accent/20 text-stone-800',
+    primary: 'bg-primary/10 text-primary dark:bg-primary/20 font-medium',
+    secondary: 'bg-secondary/10 text-secondary dark:bg-secondary/20 font-medium',
+    accent: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 font-medium',
   }
 
   return (

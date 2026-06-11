@@ -20,18 +20,22 @@ export function Button({
   className,
   disabled,
 }: ButtonProps) {
-  const base = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none'
+  const base = 'inline-flex items-center justify-center rounded-full font-medium transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none'
 
   const variants = {
-    primary: 'bg-primary text-white hover:bg-primary-dark',
-    secondary: 'bg-secondary text-white hover:bg-secondary-light',
-    outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
-    ghost: 'text-foreground hover:bg-stone-100 dark:hover:bg-stone-800',
+    primary:
+      'bg-gradient-to-r from-primary to-primary-light text-white shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:scale-105 active:scale-95',
+    secondary:
+      'bg-secondary text-white shadow-lg shadow-secondary/20 hover:shadow-xl hover:shadow-secondary/30 hover:scale-105 active:scale-95',
+    outline:
+      'border-2 border-primary text-primary hover:bg-primary hover:text-white hover:scale-105 active:scale-95',
+    ghost:
+      'text-foreground hover:bg-stone-100 dark:hover:bg-stone-800',
   }
 
   const sizes = {
-    sm: 'h-9 px-3 text-sm',
-    md: 'h-11 px-5 text-base',
+    sm: 'h-9 px-4 text-sm',
+    md: 'h-11 px-6 text-base',
     lg: 'h-13 px-8 text-lg',
   }
 
