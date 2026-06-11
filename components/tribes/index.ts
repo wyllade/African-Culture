@@ -1,0 +1,1 @@
+export { TribeCard } from './TribeCard'
