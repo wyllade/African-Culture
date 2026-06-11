@@ -5,17 +5,15 @@ import dynamic from 'next/dynamic'
 import L from 'leaflet'
 import { Loader } from '@/components/ui/Loader'
 
-// Fix default marker icons not bundling in Next.js/webpack
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
-import markerIcon from 'leaflet/dist/images/marker-icon.png'
-import markerShadow from 'leaflet/dist/images/marker-shadow.png'
-
-delete (L.Icon.Default.prototype as any)._getIconUrl
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x.src,
-  iconUrl: markerIcon.src,
-  shadowUrl: markerShadow.src,
-})
+function createIcon() {
+  return L.divIcon({
+    className: '',
+    html: `<div style="width:20px;height:20px;background:#b94a32;border:3px solid #fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>`,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+    popupAnchor: [0, -10],
+  })
+}
 
 const MapContainer = dynamic(() => import('react-leaflet').then((m) => m.MapContainer), { ssr: false, loading: () => <Loader /> })
 const TileLayer = dynamic(() => import('react-leaflet').then((m) => m.TileLayer), { ssr: false })
@@ -52,7 +50,7 @@ export function InteractiveMap({ countries }: InteractiveMapProps) {
           }
         />
         {countries.map((country) => (
-          <Marker key={country.slug} position={[country.lat, country.lng]}>
+          <Marker key={country.slug} position={[country.lat, country.lng]} icon={createIcon()}>
             <Popup>
               <a
                 href={`/countries/${country.slug}`}
