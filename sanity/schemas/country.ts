@@ -1,0 +1,32 @@
+export default {
+  name: 'country',
+  title: 'Country',
+  type: 'document',
+  fields: [
+    { name: 'name', title: 'Name', type: 'string', validation: (Rule: any) => Rule.required() },
+    { name: 'slug', title: 'Slug', type: 'slug', options: { source: 'name' } },
+    { name: 'flag', title: 'Flag', type: 'image' },
+    { name: 'population', title: 'Population', type: 'number' },
+    { name: 'capital', title: 'Capital', type: 'string' },
+    { name: 'languages', title: 'Languages', type: 'array', of: [{ type: 'string' }] },
+    {
+      name: 'coordinates',
+      title: 'Coordinates',
+      type: 'object',
+      fields: [
+        { name: 'lat', title: 'Latitude', type: 'number' },
+        { name: 'lng', title: 'Longitude', type: 'number' },
+      ],
+    },
+    { name: 'region', title: 'Region', type: 'reference', to: [{ type: 'region' }] },
+    { name: 'overview', title: 'Overview', type: 'blockContent' },
+    { name: 'traditionalClothing', title: 'Traditional Clothing', type: 'blockContent' },
+    { name: 'marriageCustoms', title: 'Marriage Customs', type: 'blockContent' },
+    { name: 'ceremonies', title: 'Ceremonies', type: 'blockContent' },
+    { name: 'musicDance', title: 'Music & Dance', type: 'blockContent' },
+    { name: 'history', title: 'History', type: 'blockContent' },
+    { name: 'gallery', title: 'Gallery', type: 'array', of: [{ type: 'image' }] },
+    { name: 'tribes', title: 'Tribes', type: 'array', of: [{ type: 'reference', to: [{ type: 'tribe' }] }] },
+    { name: 'festivals', title: 'Festivals', type: 'array', of: [{ type: 'reference', to: [{ type: 'festival' }] }] },
+  ],
+}
