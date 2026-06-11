@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Heart } from 'lucide-react'
+import { Heart } from '@/lib/icon'
 import { Logo } from '@/components/ui/Logo'
 
 const sections = [

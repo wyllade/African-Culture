@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Quote, Shuffle } from 'lucide-react'
+import { Quote, Shuffle } from '@/lib/icon'
 
 const fallbackProverbs = [
   { text: 'If you want to go fast, go alone. If you want to go far, go together.', origin: 'African Proverb' },

@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
-import { ArrowLeft, Calendar } from 'lucide-react'
+import { ArrowLeft, Calendar } from '@/lib/icon'
 
 const festivals: Record<string, {
   name: string

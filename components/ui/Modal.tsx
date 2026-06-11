@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X } from 'lucide-react'
+import { X } from '@/lib/icon'
 import { useEffect } from 'react'
 
 interface ModalProps {

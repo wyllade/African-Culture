@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import { Search } from 'lucide-react'
+import { Search } from '@/lib/icon'
 
 export function SearchBar() {
   const [query, setQuery] = useState('')

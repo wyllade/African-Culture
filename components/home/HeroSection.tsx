@@ -2,8 +2,9 @@
 
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
-import { ArrowRight, Compass } from 'lucide-react'
+import { ArrowRight, Compass } from '@/lib/icon'
 import Link from 'next/link'
+import { Logo } from '@/components/ui/Logo'
 
 export function HeroSection() {
   return (
@@ -59,7 +60,7 @@ export function HeroSection() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-amber-500/20 animate-pulse" />
               <div className="absolute inset-4 rounded-full bg-gradient-to-br from-primary/30 to-amber-500/30 animate-pulse" style={{ animationDelay: '0.5s' }} />
               <div className="absolute inset-8 rounded-full bg-gradient-to-br from-primary to-amber-500 flex items-center justify-center shadow-2xl shadow-primary/30">
-                <span className="text-7xl">🌍</span>
+                <Logo className="h-16 w-16 text-white/80" />
               </div>
             </div>
           </motion.div>

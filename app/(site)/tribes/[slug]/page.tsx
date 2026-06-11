@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Tabs } from '@/components/ui/Tabs'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft } from '@/lib/icon'
 
 const tribes: Record<string, {
   name: string

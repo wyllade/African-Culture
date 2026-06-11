@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Tabs } from '@/components/ui/Tabs'
 import { formatPopulation } from '@/lib/utils'
-import { MapPin, Users, Languages, UtensilsCrossed, Music, History, Glasses } from 'lucide-react'
+import { MapPin, Users, Languages, UtensilsCrossed, Music, History, Glasses } from '@/lib/icon'
 
 const countries = {
   kenya: {

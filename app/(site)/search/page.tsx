@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
-import { Search } from 'lucide-react'
+import { Search } from '@/lib/icon'
 
 const searchIndex = [
   { title: 'Jollof Rice', slug: 'jollof-rice', type: 'food' as const, content: 'Popular West African rice dish', country: 'Nigeria', region: 'west' },

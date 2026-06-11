@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
-import { UtensilsCrossed, Users, Languages, Music } from 'lucide-react'
+import { UtensilsCrossed, Users, Languages, Music } from '@/lib/icon'
 
 const features = [
   {

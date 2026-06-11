@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/Card'
-import { BookOpen, Users, Sparkles } from 'lucide-react'
+import { BookOpen, Users, Sparkles } from '@/lib/icon'
 import { Logo } from '@/components/ui/Logo'
 
 export default function AboutPage() {

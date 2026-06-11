@@ -12,7 +12,6 @@ const data = {
   kenya: {
     name: 'Kenya',
     slug: 'kenya',
-    flag: '🇰🇪',
     tribes: [
       { name: 'Maasai', slug: 'maasai' },
       { name: 'Kikuyu', slug: 'kikuyu' },
@@ -39,7 +38,6 @@ const data = {
   nigeria: {
     name: 'Nigeria',
     slug: 'nigeria',
-    flag: '🇳🇬',
     tribes: [
       { name: 'Yoruba', slug: 'yoruba' },
       { name: 'Hausa', slug: 'hausa' },
@@ -66,7 +64,6 @@ const data = {
   'south-africa': {
     name: 'South Africa',
     slug: 'south-africa',
-    flag: '🇿🇦',
     tribes: [
       { name: 'Zulu', slug: 'zulu' },
       { name: 'Xhosa', slug: 'xhosa' },
@@ -93,7 +90,6 @@ const data = {
   ethiopia: {
     name: 'Ethiopia',
     slug: 'ethiopia',
-    flag: '🇪🇹',
     tribes: [
       { name: 'Oromo', slug: 'oromo' },
       { name: 'Amhara', slug: 'amhara' },
@@ -117,7 +113,6 @@ const data = {
   ghana: {
     name: 'Ghana',
     slug: 'ghana',
-    flag: '🇬🇭',
     tribes: [
       { name: 'Akan', slug: 'akan' },
       { name: 'Ewe', slug: 'ewe' },

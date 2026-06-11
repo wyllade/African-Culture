@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { Quote, Shuffle, Share2 } from 'lucide-react'
+import { Quote, Shuffle, Share2 } from '@/lib/icon'
 
 const allProverbs = [
   { text: 'If you want to go fast, go alone. If you want to go far, go together.', meaning: 'Teamwork and community achieve more than individual effort.', country: 'African Proverb', categories: ['Community', 'Wisdom'] },

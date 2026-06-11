@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/Card'
-import { MapPin, Users, UtensilsCrossed, Languages, Music, ArrowRight } from 'lucide-react'
+import { MapPin, Users, UtensilsCrossed, Languages, Music, ArrowRight } from '@/lib/icon'
 
 interface ExplorerSelection {
   country?: { name: string; slug: string }

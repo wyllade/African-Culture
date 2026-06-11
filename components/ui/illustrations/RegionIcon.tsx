@@ -13,10 +13,10 @@ const arrows: Record<string, string> = {
 
 export function RegionIcon({ className = 'h-12 w-12', direction = 'central' }: RegionIconProps) {
   return (
-    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
-      <circle cx="24" cy="24" r="14" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.06" />
-      <circle cx="24" cy="24" r="5" stroke="currentColor" strokeWidth="1.5" fill="currentColor" fillOpacity="0.1" />
-      <path d={arrows[direction] || arrows.central} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" className={className} aria-hidden="true" suppressHydrationWarning data-darkreader-mode="never">
+      <circle cx="24" cy="24" r="14" strokeWidth="2" fill="currentColor" fillOpacity="0.06" />
+      <circle cx="24" cy="24" r="5" strokeWidth="1.5" fill="currentColor" fillOpacity="0.1" />
+      <path d={arrows[direction] || arrows.central} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }

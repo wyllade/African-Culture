@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardContent } from '@/components/ui/Card'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft } from '@/lib/icon'
 
 const foods: Record<string, {
   name: string

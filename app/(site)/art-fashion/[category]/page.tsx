@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft } from '@/lib/icon'
 
 const categories: Record<string, { name: string; description: string }> = {
   textiles: { name: 'Textiles', description: 'Traditional African fabrics and weaving techniques' },
