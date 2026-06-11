@@ -1,5 +1,13 @@
-import { InteractiveMap } from '@/components/countries/InteractiveMap'
+'use client'
+
+import dynamic from 'next/dynamic'
 import { CountryCard } from '@/components/countries/CountryCard'
+import { Loader } from '@/components/ui/Loader'
+
+const InteractiveMap = dynamic(() => import('@/components/countries/InteractiveMap').then((m) => m.InteractiveMap), {
+  ssr: false,
+  loading: () => <Loader />,
+})
 
 const countries = [
   {

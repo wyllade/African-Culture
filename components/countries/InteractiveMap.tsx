@@ -2,7 +2,20 @@
 
 import { useEffect, useRef } from 'react'
 import dynamic from 'next/dynamic'
+import L from 'leaflet'
 import { Loader } from '@/components/ui/Loader'
+
+// Fix default marker icons not bundling in Next.js/webpack
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
+import markerIcon from 'leaflet/dist/images/marker-icon.png'
+import markerShadow from 'leaflet/dist/images/marker-shadow.png'
+
+delete (L.Icon.Default.prototype as any)._getIconUrl
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x.src,
+  iconUrl: markerIcon.src,
+  shadowUrl: markerShadow.src,
+})
 
 const MapContainer = dynamic(() => import('react-leaflet').then((m) => m.MapContainer), { ssr: false, loading: () => <Loader /> })
 const TileLayer = dynamic(() => import('react-leaflet').then((m) => m.TileLayer), { ssr: false })
