@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/Card'
 import { StepSelector } from '@/components/explorer/StepSelector'
 import { ExplorerDashboard } from '@/components/explorer/ExplorerDashboard'
+import { Logo } from '@/components/ui/Logo'
 
 
 const data = {
@@ -183,7 +184,7 @@ export default function ExplorerPage() {
                 onClick={() => selectCountry(slug)}
                 className="p-6 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-700 hover:border-primary transition-colors text-center"
               >
-                <span className="text-4xl">{c.flag}</span>
+                <Logo className="h-10 w-10 mx-auto" />
                 <h3 className="mt-3 font-semibold text-lg">{c.name}</h3>
                 <p className="text-sm text-stone-500">
                   {c.tribes.length} tribes &middot; {c.foods.length} dishes &middot; {c.languages.length} languages
@@ -203,7 +204,7 @@ export default function ExplorerPage() {
 
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-3xl">{country?.flag}</span>
+              <Logo className="h-10 w-10" />
               <h2 className="text-2xl font-bold">{country?.name}</h2>
             </div>
 

@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Globe, Heart } from 'lucide-react'
+import { Heart } from 'lucide-react'
+import { Logo } from '@/components/ui/Logo'
 
 const sections = [
   {
@@ -38,7 +39,7 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             <div className="col-span-2 md:col-span-2">
               <Link href="/" className="flex items-center gap-2 mb-4">
-                <Globe className="h-6 w-6 text-primary" />
+                <Logo className="h-6 w-6" />
                 <span className="text-lg font-bold text-white font-serif">AfroSphere</span>
               </Link>
               <p className="text-sm text-stone-400 max-w-sm leading-relaxed">

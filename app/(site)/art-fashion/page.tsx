@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
+import { ArtIcon } from '@/components/ui/illustrations/ArtIcon'
 
 const categories = [
   { name: 'Textiles', slug: 'textiles', description: 'Kente, mudcloth, kikoy, shweshwe, and more', count: '12 artisans', color: 'bg-red-500' },
@@ -21,8 +22,8 @@ export default function ArtFashionPage() {
         {categories.map((cat) => (
           <Link key={cat.slug} href={`/art-fashion/${cat.slug}`}>
             <Card className="h-full">
-              <div className={`h-40 ${cat.color} flex items-center justify-center`}>
-                <span className="text-5xl font-bold text-white/20">{cat.name[0]}</span>
+              <div className={`h-40 ${cat.color} flex items-center justify-center text-white/30`}>
+                <ArtIcon className="h-16 w-16" />
               </div>
               <CardContent>
                 <h3 className="font-semibold text-lg">{cat.name}</h3>

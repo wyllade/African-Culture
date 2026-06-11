@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/Card'
-import { Globe, BookOpen, Users, Sparkles } from 'lucide-react'
+import { BookOpen, Users, Sparkles } from 'lucide-react'
+import { Logo } from '@/components/ui/Logo'
 
 export default function AboutPage() {
   return (
@@ -13,7 +14,7 @@ export default function AboutPage() {
         <Card>
           <CardContent className="p-6">
             <div className="flex items-start gap-4">
-              <Globe className="h-6 w-6 text-primary mt-1" />
+              <Logo className="h-8 w-8 mt-1" />
               <div>
                 <h2 className="text-xl font-semibold mb-2">Our Mission</h2>
                 <p className="leading-relaxed text-stone-600 dark:text-stone-400">

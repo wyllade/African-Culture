@@ -1,0 +1,6 @@
+export { FoodIcon } from './FoodIcon'
+export { TribeIcon } from './TribeIcon'
+export { FestivalIcon } from './FestivalIcon'
+export { ArtIcon } from './ArtIcon'
+export { LanguageIcon } from './LanguageIcon'
+export { RegionIcon } from './RegionIcon'

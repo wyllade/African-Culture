@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
-import { Calendar } from 'lucide-react'
+import { FestivalIcon } from '@/components/ui/illustrations/FestivalIcon'
 
 const festivals = [
   { name: 'Timkat', slug: 'timkat', country: 'Ethiopia', countrySlug: 'ethiopia', date: 'January 19', description: 'Ethiopian Orthodox Epiphany celebration featuring processions, baptisms, and vibrant ceremonies.', image: 'bg-blue-500' },
@@ -30,8 +30,8 @@ export default function FestivalsPage() {
         {festivals.map((festival) => (
           <Link key={festival.slug} href={`/festivals/${festival.slug}`}>
             <Card className="h-full">
-              <div className={`h-32 ${festival.image} flex items-center justify-center`}>
-                <Calendar className="h-10 w-10 text-white/50" />
+              <div className={`h-32 ${festival.image} flex items-center justify-center text-white/50`}>
+                <FestivalIcon className="h-12 w-12" />
               </div>
               <CardContent>
                 <Badge variant="primary">{festival.country}</Badge>

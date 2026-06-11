@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
+import { TribeIcon } from '@/components/ui/illustrations/TribeIcon'
 
 interface TribeCardProps {
   name: string
@@ -15,8 +16,8 @@ export function TribeCard({ name, slug, location, countryName, countrySlug }: Tr
   return (
     <Link href={`/tribes/${slug}`}>
       <Card>
-        <div className="h-32 bg-gradient-to-br from-stone-200 to-amber-200 dark:from-stone-700 dark:to-amber-900 flex items-center justify-center">
-          <span className="text-3xl font-bold text-stone-400 dark:text-stone-500">{name[0]}</span>
+        <div className="h-32 bg-gradient-to-br from-stone-200 to-amber-200 dark:from-stone-700 dark:to-amber-900 flex items-center justify-center text-stone-400 dark:text-stone-500">
+          <TribeIcon className="h-14 w-14" />
         </div>
         <CardContent>
           <h3 className="font-semibold text-lg">{name}</h3>

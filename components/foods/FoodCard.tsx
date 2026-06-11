@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
+import { FoodIcon } from '@/components/ui/illustrations/FoodIcon'
 
 interface FoodCardProps {
   name: string
@@ -16,8 +17,8 @@ export function FoodCard({ name, slug, region, countryName, countrySlug }: FoodC
   return (
     <Link href={`/foods/${slug}`}>
       <Card>
-        <div className="h-40 bg-gradient-to-br from-amber-100 to-orange-200 dark:from-amber-900 dark:to-orange-800 flex items-center justify-center">
-          <span className="text-4xl">🍽</span>
+        <div className="h-40 bg-gradient-to-br from-amber-100 to-orange-200 dark:from-amber-900 dark:to-orange-800 flex items-center justify-center text-amber-500 dark:text-amber-400">
+          <FoodIcon className="h-16 w-16" />
         </div>
         <CardContent>
           <h3 className="font-semibold text-lg">{name}</h3>

@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Search, Globe } from 'lucide-react'
+import { Menu, X, Search } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { Logo } from '@/components/ui/Logo'
 import { SearchBar } from './SearchBar'
 import { cn } from '@/lib/utils'
 
@@ -45,10 +46,11 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <Globe className="h-7 w-7 text-primary transition-transform group-hover:rotate-12 duration-300" />
+            <Logo className="h-7 w-7 transition-transform group-hover:rotate-12 duration-300" />
             <span className={cn(
               'text-xl font-bold tracking-tight transition-colors',
               'font-serif',
+              showSolid && 'text-foreground',
               !showSolid && 'text-white drop-shadow-md'
             )}>
               AfroSphere
