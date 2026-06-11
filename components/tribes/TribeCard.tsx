@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Card, CardContent } from '@/components/ui/Card'
 import { TribeIcon } from '@/components/ui/illustrations/TribeIcon'
 
@@ -13,6 +14,8 @@ interface TribeCardProps {
 }
 
 export function TribeCard({ name, slug, location, countryName, countrySlug }: TribeCardProps) {
+  const router = useRouter()
+
   return (
     <Link href={`/tribes/${slug}`}>
       <Card>
@@ -22,9 +25,12 @@ export function TribeCard({ name, slug, location, countryName, countrySlug }: Tr
         <CardContent>
           <h3 className="font-semibold text-lg">{name}</h3>
           <p className="text-sm text-stone-500 mt-1">{location}</p>
-          <Link href={`/countries/${countrySlug}`} className="text-xs text-primary hover:underline mt-1 inline-block">
+          <button
+            onClick={(e) => { e.preventDefault(); router.push(`/countries/${countrySlug}`) }}
+            className="text-xs text-primary hover:underline mt-1 inline-block"
+          >
             {countryName}
-          </Link>
+          </button>
         </CardContent>
       </Card>
     </Link>

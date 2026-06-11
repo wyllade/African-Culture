@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { FoodIcon } from '@/components/ui/illustrations/FoodIcon'
+import { useRouter } from 'next/navigation'
 
 interface FoodCardProps {
   name: string
@@ -14,6 +15,8 @@ interface FoodCardProps {
 }
 
 export function FoodCard({ name, slug, region, countryName, countrySlug }: FoodCardProps) {
+  const router = useRouter()
+
   return (
     <Link href={`/foods/${slug}`}>
       <Card>
@@ -24,9 +27,12 @@ export function FoodCard({ name, slug, region, countryName, countrySlug }: FoodC
           <h3 className="font-semibold text-lg">{name}</h3>
           <div className="mt-2 flex items-center gap-2">
             <Badge variant="primary">{region}</Badge>
-            <Link href={`/countries/${countrySlug}`} className="text-xs text-stone-500 hover:text-primary">
+            <button
+              onClick={(e) => { e.preventDefault(); router.push(`/countries/${countrySlug}`) }}
+              className="text-xs text-stone-500 hover:text-primary transition-colors"
+            >
               {countryName}
-            </Link>
+            </button>
           </div>
         </CardContent>
       </Card>
